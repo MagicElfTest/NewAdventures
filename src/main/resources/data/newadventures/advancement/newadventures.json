@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "newadventures:scroll"
+    },
+    "title": "New Adventures",
+    "description": "An ancient scroll written by an adventurer who lived a long time ago.",
+    "background": "minecraft:block/acacia_leaves",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "requirements": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["newadventures:scroll"]
+          }
+        ]
+      }
+    }
+  }
+}
