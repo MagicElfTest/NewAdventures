@@ -8,5 +8,11 @@
   "advancement.newadventures.root.title" : "New Adventures",
   "advancement.newadventures.root.description" : "This is the start of an adventure.",
   "advancement.newadventures.scroll.title" : "An Old Scroll",
-  "advancement.newadventures.scroll.description" : "An ancient scroll written by an adventurer who lived a long time ago."
+  "advancement.newadventures.scroll.description" : "An ancient scroll written by an adventurer who lived a long time ago.",
+
+  "block.newadventures.yira_log" : "Yira Log",
+  "block.newadventures.yira_wood" : "Yira Wood",
+  "block.newadventures.strpped_yira_log" : "Stripped Yira Log",
+  "block.newadventures.strpped_yira_wood" : "Stripped Yira Wood",
+  "block.newadventures.yira_planks" : "Yira Planks"
 }

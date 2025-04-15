@@ -9,23 +9,14 @@
     "description": {
       "translate": "advancement.newadventures.root.description"
     },
-    "background": "newadventures:textures/block/yira_plank.png",
+    "background": "newadventures:textures/block/yira/yira_planks.png",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
   },
   "criteria": {
     "requirements": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:dirt"
-            ]
-          }
-        ]
-      }
+      "trigger": "minecraft:tick"
     }
   }
 }

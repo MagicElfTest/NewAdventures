@@ -13,7 +13,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "root",
+  "parent": "newadventures:root",
   "criteria": {
     "requirements": {
       "trigger": "minecraft:inventory_changed",
