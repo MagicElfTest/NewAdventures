@@ -3,6 +3,10 @@
 
   "creativetab.newadventures.scroll_tab" : "Scrolls & MagicStuff",
 
-  "creativetab.newadventures.misc_tab" : "New Adventures Misc"
+  "creativetab.newadventures.misc_tab" : "New Adventures Misc",
 
+  "advancement.newadventures.root.title" : "New Adventures",
+  "advancement.newadventures.root.description" : "This is the start of an adventure.",
+  "advancement.newadventures.scroll.title" : "An Old Scroll",
+  "advancement.newadventures.scroll.description" : "An ancient scroll written by an adventurer who lived a long time ago."
 }
