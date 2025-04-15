@@ -39,10 +39,10 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
         if(context.getItemInHand().getItem() instanceof AxeItem) {
             if (state.is(BlockInit.YIRA_LOG.get())) {
-                return BlockInit.YIRA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+                return BlockInit.STRIPPED_YIRA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
             if (state.is(BlockInit.YIRA_WOOD.get())) {
-                return BlockInit.YIRA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+                return BlockInit.STRIPPED_YIRA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 
