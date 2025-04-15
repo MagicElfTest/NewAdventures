@@ -1,3 +1,8 @@
 {
-  "item.newadventures.scroll": "Old Scroll"
+  "item.newadventures.scroll": "Old Scroll",
+
+  "creativetab.newadventures.scroll_tab" : "Scrolls & MagicStuff",
+
+  "creativetab.newadventures.misc_tab" : "New Adventures Misc"
+
 }

@@ -1,4 +1,4 @@
-package net.blockpainter.newadventures.init;
+package net.blockpainter.newadventures.item;
 
 import net.blockpainter.newadventures.NewAdventures;
 import net.minecraft.core.registries.Registries;

@@ -1,16 +1,12 @@
 package net.blockpainter.newadventures;
 
-import com.mojang.logging.LogUtils;
-import net.blockpainter.newadventures.init.ItemInit;
-import net.minecraft.advancements.Advancement;
+import net.blockpainter.newadventures.creativetab.CreativeTabInit;
+import net.blockpainter.newadventures.item.ItemInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import net.minecraftforge.registries.DeferredRegister;
-import org.slf4j.Logger;
 
 @Mod(NewAdventures.MODID)
 public class NewAdventures {
@@ -27,6 +23,9 @@ public class NewAdventures {
         MinecraftForge.EVENT_BUS.register(this);
         ItemInit.ITEMS.register(modEventBus);
 
+        CreativeTabInit.register(modEventBus);
     }
+
+
 
 }
