@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,6 +42,8 @@ public class BlockInit {
             SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON,
             SoundEvents.WOODEN_BUTTON_CLICK_OFF,
             SoundEvents.WOODEN_BUTTON_CLICK_ON));
+
+    public static final WoodType YIRA_WOODTYPE = WoodType.register(new WoodType("yira", BlockSetType.register(YIRA_BLOCKSETTYPE)));
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, NewAdventures.MODID);
 
@@ -97,8 +100,21 @@ public class BlockInit {
 
     public static final RegistryObject<PressurePlateBlock> YIRA_PRESSURE_PLATE = registerBlock("yira_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.register(YIRA_BLOCKSETTYPE),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE).setId(ResourceKey.create((Registries.BLOCK), ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_pressure_plate"))))
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_pressure_plate"))))
             );
+
+    public static final RegistryObject<Block> YIRA_FENCE = registerBlock("yira_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)
+                   .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_fence"))))
+    );
+
+    public static final RegistryObject<Block> YIRA_FENCE_GATE = registerBlock("yira_fence_gate",
+            () -> new FenceGateBlock(WoodType.register(YIRA_WOODTYPE), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).setId(ResourceKey.create((Registries.BLOCK), ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_fence"))))
+    );
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
