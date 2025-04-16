@@ -1,8 +1,11 @@
 package net.blockpainter.newadventures.blocks;
 
 import net.blockpainter.newadventures.NewAdventures;
+import net.blockpainter.newadventures.blocks.custom.ModSaplingBlock;
 import net.blockpainter.newadventures.creativetab.CreativeTabInit;
 import net.blockpainter.newadventures.item.ItemInit;
+import net.blockpainter.newadventures.worldgen.tree.ModTreeGrowers;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -93,16 +96,26 @@ public class BlockInit {
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_slab"))))
             );
 
-    public static final RegistryObject<DoorBlock> YIRA_DOOR = registerBlock("yira_door",
+    public static final RegistryObject<Block> YIRA_DOOR = registerBlock("yira_door",
             () -> new DoorBlock(BlockSetType.register(YIRA_BLOCKSETTYPE),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_door"))))
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).noOcclusion().setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_door"))))
             );
+    public static final RegistryObject<Block> YIRA_TRAPDOOR = registerBlock("yira_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.register(YIRA_BLOCKSETTYPE),
+                    BlockBehaviour.Properties.of().noOcclusion().setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_trapdoor"))))
+    );
 
-    public static final RegistryObject<PressurePlateBlock> YIRA_PRESSURE_PLATE = registerBlock("yira_pressure_plate",
+    public static final RegistryObject<Block> YIRA_PRESSURE_PLATE = registerBlock("yira_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.register(YIRA_BLOCKSETTYPE),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_pressure_plate"))))
             );
+
+    public static final RegistryObject<Block> YIRA_BUTTON = registerBlock("yira_button",
+            () -> new ButtonBlock(BlockSetType.register(YIRA_BLOCKSETTYPE), 10,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)
+                            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_button"))))
+    );
 
     public static final RegistryObject<Block> YIRA_FENCE = registerBlock("yira_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)
@@ -112,6 +125,27 @@ public class BlockInit {
     public static final RegistryObject<Block> YIRA_FENCE_GATE = registerBlock("yira_fence_gate",
             () -> new FenceGateBlock(WoodType.register(YIRA_WOODTYPE), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).setId(ResourceKey.create((Registries.BLOCK), ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_fence"))))
     );
+
+    public static final RegistryObject<Block> YIRA_LEAVES = registerBlock("yira_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_leaves")))) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> YIRA_SAPLING = registerBlock("yira_sapling",
+            () -> new ModSaplingBlock(ModTreeGrowers.YIRA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).noOcclusion().setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_sapling"))), () -> Blocks.END_STONE));
 
 
 
