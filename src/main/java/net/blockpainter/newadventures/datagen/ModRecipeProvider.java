@@ -45,57 +45,6 @@ public class ModRecipeProvider extends RecipeProvider  {
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("minecraft", "logs")),
                 4
         );
-
-        /*this.shaped(RecipeCategory.MISC, ModBlocks.YIRA_PLANKS.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModBlocks.YIRA_LOG.get())
-                .unlockedBy(getHasName(ModItems.BEAN.get()), has(ModItems.BEAN.get()))
-                .save(this.output);
-
-        this.shaped(RecipeCategory.MISC, ModBlocks.COMPRESSED_BEAN_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModBlocks.BEAN_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.BEAN_BLOCK.get()), has(ModBlocks.BEAN_BLOCK.get()))
-                .save(this.output);
-
-        this.shaped(RecipeCategory.TOOLS, ModItems.BEAN_WAND.get())
-                .pattern("  Y")
-                .pattern(" X ")
-                .pattern("#  ")
-                .define('Y', ModItems.BEAN.get())
-                .define('X', Items.NETHER_STAR)
-                .define('#', Items.STICK)
-                .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
-                .unlockedBy(getHasName(ModItems.BEAN.get()), has(ModItems.BEAN.get()))
-                .save(this.output);
-
-        this.shapeless(RecipeCategory.MISC, ModBlocks.BEAN_BLOCK.get(), 9)
-                .requires(ModBlocks.COMPRESSED_BEAN_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.COMPRESSED_BEAN_BLOCK.get()), has(ModBlocks.COMPRESSED_BEAN_BLOCK.get()))
-                .save(this.output, BeanMachine.MODID + ":bean_block_from_compressed_bean_block");
-
-        this.shapeless(RecipeCategory.MISC, ModItems.BEAN.get(), 9)
-                .requires(ModBlocks.BEAN_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.BEAN_BLOCK.get()), has(ModBlocks.BEAN_BLOCK.get()))
-                .save(this.output, BeanMachine.MODID + ":bean_from_bean_block");
-
-        this.oreSmelting(List.of(ModItems.UNPROCESSED_BEAN.get(), ModBlocks.DEEPSLATE_BEAN_ORE.get(), ModBlocks.BEAN_ORE.get()), RecipeCategory.MISC, ModItems.BEAN.get(), 0.25f, 200, "bean");
-        this.oreBlasting(List.of(ModItems.UNPROCESSED_BEAN.get(), ModBlocks.DEEPSLATE_BEAN_ORE.get(), ModBlocks.BEAN_ORE.get()), RecipeCategory.MISC, ModItems.BEAN.get(), 0.25f, 200, "bean");
-
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.BEAN.get()), RecipeCategory.FOOD, ModItems.COOKED_BEAN.get(), 0.35f, 200)
-                .unlockedBy(getHasName(ModItems.BEAN.get()), has(ModItems.BEAN.get()))
-                .save(this.output);
-
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.COOKED_BEAN.get()), RecipeCategory.MISC, ModItems.CHARRED_BEAN.get(), 0.35f, 200)
-                .unlockedBy(getHasName(ModItems.COOKED_BEAN.get()), has(ModItems.COOKED_BEAN.get()))
-                .save(this.output);*/
-
-
-
     }
     @Override
     protected void generateForEnabledBlockFamilies(FeatureFlagSet pEnabledFeatures) {
