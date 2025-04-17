@@ -29,8 +29,11 @@ public class CreativeTabInit {
                         output.accept(ModBlocks.YIRA_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.YIRA_DOOR.get());
                         output.accept(ModBlocks.YIRA_SLAB.get());
+                        output.accept(ModBlocks.YIRA_BUTTON.get());
+                        output.accept(ModBlocks.YIRA_TRAPDOOR.get());
+                        output.accept(ModBlocks.YIRA_LEAVES.get());
                         output.accept(ModBlocks.YIRA_STAIRS.get());
-
+                        output.accept(ModBlocks.YIRA_SAPLING.get());
                     })
                     .build());
 

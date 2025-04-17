@@ -350,14 +350,14 @@ public class ModBlockModelGenerators extends BlockModelGenerators {
     }
 
     protected void createLeave(Block pLeave) {
-        TextureMapping textureMapping = TextureMapping.defaultTexture(pLeave);
+        TextureMapping textureMapping = TextureMapping.cube(pLeave);
         ResourceLocation resourceLocation = ModModelTemplates.LEAVES.create(pLeave, textureMapping, this.modelOutput);
         this.blockStateOutput.accept(createSimpleBlock(pLeave, resourceLocation));
         this.registerSimpleItemModel(pLeave, resourceLocation);
     }
 
     protected void createSapling(Block pSapling) {
-        TextureMapping textureMapping = TextureMapping.defaultTexture(pSapling);
+        TextureMapping textureMapping = TextureMapping.cross(pSapling);
         ResourceLocation resourceLocation = ModModelTemplates.CROSS.create(pSapling, textureMapping, this.modelOutput);
         this.blockStateOutput.accept(createSimpleBlock(pSapling, resourceLocation));
         this.registerSimpleFlatItemModel(pSapling);

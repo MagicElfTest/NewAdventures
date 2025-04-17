@@ -24,8 +24,8 @@ public class ModModelTemplates extends ModelTemplates {
     public static final ModModelTemplate PILLAR = create("cube_column", "", TextureSlot.SIDE, TextureSlot.END);
     public static final ModModelTemplate WOOD = create("cube_column", "", TextureSlot.SIDE, TextureSlot.END);
     public static final ModModelTemplate PILLAR_HORIZONTEL = create("cube_column_horizontal", "_horizontal",TextureSlot.SIDE, TextureSlot.END);
-    public static final ModModelTemplate LEAVES = create("leaves", "", TextureSlot.TEXTURE);
-    public static final ModModelTemplate CROSS = create("cross", "", TextureSlot.TEXTURE);
+    public static final ModModelTemplate LEAVES = create("leaves", "", TextureSlot.ALL);
+    public static final ModModelTemplate CROSS = create("cross", "", TextureSlot.CROSS);
     private static ModModelTemplate create(String pName, String pSuffix, TextureSlot... pRequiredSlots) {
         return new ModModelTemplate(Optional.of(ResourceLocation.withDefaultNamespace("block/" + pName)), Optional.of(pSuffix), pRequiredSlots);
     }

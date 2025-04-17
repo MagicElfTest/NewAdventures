@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Streams;
 import com.google.gson.JsonObject;
+import net.blockpainter.newadventures.NewAdventures;
 import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.blockpainter.newadventures.blocks.ModFlammableRotatedPillarBlock;
 import net.minecraft.client.data.models.model.*;
@@ -69,6 +70,7 @@ public class ModModelTemplate extends ModelTemplate {
                 map.forEach((p_375899_, p_377821_) -> jsonobject1.addProperty(p_375899_.getId(), p_377821_.toString()));
                 jsonobject.add("textures", jsonobject1);
             }
+            jsonobject.addProperty("render_type", "minecraft:cutout");
             return jsonobject;
         });
         return pModelLocation;
@@ -106,6 +108,12 @@ public class ModModelTemplate extends ModelTemplate {
         // Extrahiere die beiden nötigen Slots
         ResourceLocation side  = textureMapping.get(TextureSlot.SIDE);
 
+        String oldSide = side.toString();
+
+
+        String newStr = oldSide.replace("_wood", "_log");
+        NewAdventures.LOGGER.info(newStr);
+
         // Gib das Model aus
         output.accept(modelLocation, () -> {
             JsonObject root = new JsonObject();
@@ -114,8 +122,8 @@ public class ModModelTemplate extends ModelTemplate {
 
             // Texturen-Objekt bauen
             JsonObject textures = new JsonObject();
-            textures.addProperty("end",  side.toString());
-            textures.addProperty("side", side.toString());
+            textures.addProperty("end",  newStr);
+            textures.addProperty("side", newStr);
 
             root.add("textures", textures);
             return root;

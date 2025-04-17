@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
   "textures": {
-    "texture": "newadventures:block/yira_sapling"
+    "cross": "newadventures:block/yira_sapling"
   }
 }

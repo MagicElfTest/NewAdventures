@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "texture": "newadventures:block/yira_leaves"
+    "all": "newadventures:block/yira_leaves"
   }
 }
