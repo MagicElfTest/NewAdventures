@@ -12,8 +12,8 @@
 
   "item.newadventures.yira_log" : "Yira Log",
   "item.newadventures.yira_wood" : "Yira Wood",
-  "item.newadventures.strpped_yira_log" : "Stripped Yira Log",
-  "item.newadventures.strpped_yira_wood" : "Stripped Yira Wood",
+  "item.newadventures.stripped_yira_log" : "Stripped Yira Log",
+  "item.newadventures.stripped_yira_wood" : "Stripped Yira Wood",
   "item.newadventures.yira_planks" : "Yira Planks",
   "item.newadventures.yira_fence_gate" : "Yira Fence Gate",
   "item.newadventures.yira_fence" : "Yira Fence",
@@ -21,8 +21,8 @@
   "item.newadventures.yira_door" : "Yira Door",
   "item.newadventures.yira_slab" : "Yira Slab",
   "item.newadventures.yira_button" : "Yira Button",
-  "item.newadventures.yira_Trapdoor" : "Yira Trapdoor",
+  "item.newadventures.yira_trapdoor" : "Yira Trapdoor",
   "item.newadventures.yira_leaves" : "Yira Leaves",
-  "item.newadventures.yira_stair" : "Yira Stair",
+  "item.newadventures.yira_stairs" : "Yira Stairs",
   "item.newadventures.yira_sapling" : "Yira Sapling"
 }

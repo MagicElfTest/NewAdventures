@@ -119,7 +119,7 @@ public class ModBlocks {
     );
 
     public static final RegistryObject<Block> YIRA_FENCE_GATE = registerBlock("yira_fence_gate",
-            () -> new FenceGateBlock(WoodType.register(YIRA_WOODTYPE), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).setId(ResourceKey.create((Registries.BLOCK), ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_fence"))))
+            () -> new FenceGateBlock(WoodType.register(YIRA_WOODTYPE), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).setId(ResourceKey.create((Registries.BLOCK), ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_fence_gate"))))
     );
 
     public static final RegistryObject<Block> YIRA_LEAVES = registerBlock("yira_leaves",

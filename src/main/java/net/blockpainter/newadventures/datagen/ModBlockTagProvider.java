@@ -20,13 +20,20 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
 
         tag(BlockTags.FENCES).add(ModBlocks.YIRA_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.YIRA_FENCE_GATE.get());
 
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.YIRA_WOOD.get())
                 .add(ModBlocks.YIRA_LOG.get())
                 .add(ModBlocks.STRIPPED_YIRA_LOG.get())
-                .add(ModBlocks.STRIPPED_YIRA_WOOD.get())
+                .add(ModBlocks.STRIPPED_YIRA_WOOD.get());
+        this.tag(BlockTags.LOGS)
+                .add(ModBlocks.YIRA_WOOD.get())
+                .add(ModBlocks.YIRA_LOG.get())
+                .add(ModBlocks.STRIPPED_YIRA_LOG.get())
+                .add(ModBlocks.STRIPPED_YIRA_WOOD.get());
+        this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.YIRA_PLANKS.get());
     }
 }
