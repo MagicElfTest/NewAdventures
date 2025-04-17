@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:item/yira/yira_hanging_sign"
+    "layer0": "newadventures:item/yira/yira_hanging_sign"
   }
 }

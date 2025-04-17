@@ -28,8 +28,10 @@ public class CreativeTabInit {
                         output.accept(BlockInit.YIRA_FENCE.get());
                         output.accept(BlockInit.YIRA_PRESSURE_PLATE.get());
                         output.accept(BlockInit.YIRA_DOOR.get());
+                        output.accept(BlockInit.YIRA_TRAPDOOR.get());
                         output.accept(BlockInit.YIRA_SLAB.get());
                         output.accept(BlockInit.YIRA_STAIRS.get());
+                        output.accept(BlockInit.YIRA_BUTTON.get());
 
                     })
                     .build());
