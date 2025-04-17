@@ -2,8 +2,8 @@ package net.blockpainter.newadventures;
 
 import com.mojang.logging.LogUtils;
 import net.blockpainter.newadventures.creativetab.CreativeTabInit;
-import net.blockpainter.newadventures.item.ItemInit;
-import net.blockpainter.newadventures.blocks.BlockInit;
+import net.blockpainter.newadventures.item.ModItems;
+import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,8 +28,8 @@ public class NewAdventures {
         IEventBus modEventBus = context.getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
 
-        ItemInit.ITEMS.register(modEventBus);
-        BlockInit.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         CreativeTabInit.register(modEventBus);
     }

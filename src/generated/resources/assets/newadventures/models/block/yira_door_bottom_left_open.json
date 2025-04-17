@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "newadventures:block/yira_door_bottom",
+    "top": "newadventures:block/yira_door_top"
+  }
+}

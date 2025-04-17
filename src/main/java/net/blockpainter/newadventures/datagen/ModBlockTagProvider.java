@@ -1,11 +1,10 @@
 package net.blockpainter.newadventures.datagen;
 
 import net.blockpainter.newadventures.NewAdventures;
-import net.blockpainter.newadventures.blocks.BlockInit;
+import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -20,14 +19,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
-        tag(BlockTags.FENCES).add(BlockInit.YIRA_FENCE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.YIRA_FENCE.get());
 
 
         this.tag(BlockTags.LOGS_THAT_BURN)
-                .add(BlockInit.YIRA_WOOD.get())
-                .add(BlockInit.YIRA_LOG.get())
-                .add(BlockInit.STRIPPED_YIRA_LOG.get())
-                .add(BlockInit.STRIPPED_YIRA_WOOD.get())
-                .add(BlockInit.YIRA_PLANKS.get());
+                .add(ModBlocks.YIRA_WOOD.get())
+                .add(ModBlocks.YIRA_LOG.get())
+                .add(ModBlocks.STRIPPED_YIRA_LOG.get())
+                .add(ModBlocks.STRIPPED_YIRA_WOOD.get())
+                .add(ModBlocks.YIRA_PLANKS.get());
     }
 }

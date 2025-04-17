@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "newadventures:block/yira/yira_door_bottom",
-    "top": "newadventures:block/yira/yira_door_top"
-  }
-}

@@ -2,7 +2,7 @@ package net.blockpainter.newadventures.worldgen;
 
 
 import net.blockpainter.newadventures.NewAdventures;
-import net.blockpainter.newadventures.blocks.BlockInit;
+import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 
@@ -28,10 +28,10 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, YIRA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(BlockInit.YIRA_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.YIRA_LOG.get()),
                 new ForkingTrunkPlacer(4,4,3),
 
-                BlockStateProvider.simple(BlockInit.YIRA_LEAVES.get()),
+                BlockStateProvider.simple(ModBlocks.YIRA_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());

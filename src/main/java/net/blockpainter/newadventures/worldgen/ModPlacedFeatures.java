@@ -2,7 +2,7 @@ package net.blockpainter.newadventures.worldgen;
 
 
 import net.blockpainter.newadventures.NewAdventures;
-import net.blockpainter.newadventures.blocks.BlockInit;
+import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -26,7 +26,7 @@ public class ModPlacedFeatures {
 
         register(context, YIRA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.YIRA_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        BlockInit.YIRA_SAPLING.get()));
+                        ModBlocks.YIRA_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

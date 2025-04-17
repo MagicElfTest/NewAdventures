@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "texture": "newadventures:block/yira_sapling"
+  }
+}

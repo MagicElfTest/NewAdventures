@@ -1,6 +1,7 @@
 /*package net.blockpainter.newadventures.entity.custom;
 
 import net.blockpainter.newadventures.blocks.BlockInit;
+import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.blockpainter.newadventures.entity.ModEntities;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -18,7 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-/*import java.util.function.IntFunction;
+import java.util.function.IntFunction;
 
 public class ModBoatEntity extends AbstractBoat {
 
@@ -36,7 +37,7 @@ public class ModBoatEntity extends AbstractBoat {
         this.zo = pZ;
     }
 
-    /*@Override
+    @Override
     public Item getDropItem() {
         return switch (getModVariant()) {
             case PINE -> ModItems.PINE_BOAT.get();
@@ -51,7 +52,7 @@ public class ModBoatEntity extends AbstractBoat {
         return Type.byId(this.entityData.get(DATA_ID_TYPE));
     }
 
-    /*protected void defineSynchedData() {
+    protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE, Type.PINE.ordinal());
     }
@@ -72,7 +73,7 @@ public class ModBoatEntity extends AbstractBoat {
     }
 
     public static enum Type implements StringRepresentable {
-        PINE(BlockInit.YIRA_PLANKS.get(), "pine");
+        PINE(ModBlocks.YIRA_PLANKS.get(), "pine");
 
         private final String name;
         private final Block planks;
@@ -100,7 +101,7 @@ public class ModBoatEntity extends AbstractBoat {
             return this.name;
         }
 
-        /**
+        /*
          * Get a boat type by its enum ordinal
 
         public static ModBoatEntity.Type byId(int pId) {
