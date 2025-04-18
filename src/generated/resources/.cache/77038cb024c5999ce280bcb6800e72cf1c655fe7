@@ -1,4 +1,4 @@
-// 1.21.4	2025-04-17T20:55:48.1373294	Model Definitions
+// 1.21.4	2025-04-18T01:21:45.5007674	Model Definitions
 99da57ebd1210f1efd7755b15ab51041e4d8cb66 assets/newadventures/blockstates/stripped_yira_log.json
 3a3f1f0af26b45bf7abde515b5314ec735c37105 assets/newadventures/blockstates/stripped_yira_wood.json
 f80e8492df31bb11f421a291207b535b6531c231 assets/newadventures/blockstates/yira_button.json
@@ -17,7 +17,9 @@ c3064f2888a7a640ed1888fc733c7e4cb807e639 assets/newadventures/blockstates/yira_w
 7b3ea896b6570c6f7de4815df21c43ea467b858d assets/newadventures/items/scroll.json
 dbb028890444a80c072e82cdda7867218e672a9b assets/newadventures/items/stripped_yira_log.json
 20ceb208055cca4990980f34bbbd2ed68eeeb67b assets/newadventures/items/stripped_yira_wood.json
+689e64c6041eaa6e811313eab6754689592b1fd9 assets/newadventures/items/yira_boat.json
 6e53c700723cd0ec29dd2b410848e2fc5c092ae8 assets/newadventures/items/yira_button.json
+451e5dfb366dd1d818a09bb882fe51632107200a assets/newadventures/items/yira_chest_boat.json
 6c14233df65a12c893116fbe29a15c6321897f7f assets/newadventures/items/yira_door.json
 a202a072e8c2038d8630714bce8d48f2d15ac3a8 assets/newadventures/items/yira_fence.json
 04ab797c542df8273388008db9094b6f7760e099 assets/newadventures/items/yira_fence_gate.json
@@ -68,5 +70,7 @@ af07e3daae6650e0fa048445c55586355258e187 assets/newadventures/models/block/yira_
 37aa27440edc96c3bc00e468d3f87bac40630f68 assets/newadventures/models/block/yira_trapdoor_top.json
 efaa487af2fa497cfae31389d13bf9325782f1f0 assets/newadventures/models/block/yira_wood.json
 ef38efff099823c8acfbb2d5efef4a5e8388d960 assets/newadventures/models/item/scroll.json
+e8682c3877695f0823a454cff70dd6e27438693f assets/newadventures/models/item/yira_boat.json
+099e8f237c32e8cab15bf19ea28708bf029c8d7d assets/newadventures/models/item/yira_chest_boat.json
 1a7217f4ce7b73ae127998cafdcd6c500bace704 assets/newadventures/models/item/yira_door.json
 e5970d196d84b1b4ee0b8bd7a6b5f1dcf8227962 assets/newadventures/models/item/yira_sapling.json

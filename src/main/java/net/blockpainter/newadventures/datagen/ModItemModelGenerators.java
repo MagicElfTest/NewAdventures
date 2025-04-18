@@ -22,6 +22,8 @@ public class ModItemModelGenerators extends ItemModelGenerators {
     @Override
     public void run() {
         generateFlatItem(ModItems.SCROLL.get(), ModelTemplates.FLAT_ITEM);
+        generateFlatItem(ModItems.YIRA_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generateFlatItem(ModItems.YIRA_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
 
 
         if (this.itemModelOutput instanceof ModModelProvider.ModItemInfoCollector collector)

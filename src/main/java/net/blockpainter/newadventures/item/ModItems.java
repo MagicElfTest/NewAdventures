@@ -1,6 +1,7 @@
 package net.blockpainter.newadventures.item;
 
 import net.blockpainter.newadventures.NewAdventures;
+import net.blockpainter.newadventures.entity.custom.ModBoatEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -23,19 +24,24 @@ public class ModItems {
                 .rarity(Rarity.EPIC)
                 .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "scroll")))
             ));
-
-    /*public static final RegistryObject<Item> PINE_BOAT = ITEMS.register("pine_boat",
-            () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties()));
-    public static final RegistryObject<Item> PINE_CHEST_BOAT = ITEMS.register("pine_chest_boat",
-            () -> new ModBoatItem(true, ModBoatEntity.Type.PINE, new Item.Properties()));*/
-
-
-    //public static final RegistryObject<BoatItem> YIRA_BOAT = ITEMS.register("yira_boat", () -> new BoatItem(ModEntities.YIRA_BOAT.get(), new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_boat")))));
+    public static final RegistryObject<Item> YIRA_BOAT = ITEMS.register("yira_boat",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_boat")))
+            ));
+    public static final RegistryObject<Item> YIRA_CHEST_BOAT = ITEMS.register("yira_chest_boat",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_chest_boat")))
+            ));
 
     /*public static final RegistryObject<Item> YIRA_BOAT = ITEMS.register("yira_boat",
-            () -> new YiraBoatItem(ModEntities.YIRA_BOAT, YiraBoatType.YIRA,
-                    new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_boat"))))
-    );*/
+            () -> new ModBoatItem(false, ModBoatEntity.Type.YIRA, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_boat")))));
+    public static final RegistryObject<Item> YIRA_CHEST_BOAT = ITEMS.register("yira_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.YIRA, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(NewAdventures.MODID, "yira_chest_boat")))));*/
+
+
+
 }
 
 

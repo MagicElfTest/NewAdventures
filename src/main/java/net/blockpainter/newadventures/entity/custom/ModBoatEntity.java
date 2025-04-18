@@ -1,8 +1,9 @@
-/*package net.blockpainter.newadventures.entity.custom;
+package net.blockpainter.newadventures.entity.custom;
 
-import net.blockpainter.newadventures.blocks.BlockInit;
+
 import net.blockpainter.newadventures.blocks.ModBlocks;
 import net.blockpainter.newadventures.entity.ModEntities;
+import net.blockpainter.newadventures.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -23,26 +24,26 @@ import java.util.function.IntFunction;
 
 public class ModBoatEntity extends AbstractBoat {
 
-    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModBoatEntity.class, EntityDataSerializers.INT);
 
     public ModBoatEntity(EntityType<? extends AbstractBoat> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+        super(pEntityType, pLevel, ModItems.YIRA_BOAT); // or your matching vanilla type
     }
 
     public ModBoatEntity(Level level, double pX, double pY, double pZ) {
-        this(ModEntities.MOD_BOAT, level);
+        this(ModEntities.YIRA_BOAT.get(), level);
         this.setPos(pX, pY, pZ);
         this.xo = pX;
         this.yo = pY;
         this.zo = pZ;
     }
 
-    @Override
+    /*@Override
     public Item getDropItem() {
         return switch (getModVariant()) {
-            case PINE -> ModItems.PINE_BOAT.get();
+            case PINE -> ModEntities.YIRA_BOAT;
         };
-    }
+    }*/
 
     public void setVariant(Type pVariant) {
         this.entityData.set(DATA_ID_TYPE, pVariant.ordinal());
@@ -52,10 +53,10 @@ public class ModBoatEntity extends AbstractBoat {
         return Type.byId(this.entityData.get(DATA_ID_TYPE));
     }
 
-    protected void defineSynchedData() {
+    /*protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE, Type.PINE.ordinal());
-    }
+    }*/
 
     @Override
     protected double rideHeight(EntityDimensions p_363309_) {
@@ -73,7 +74,7 @@ public class ModBoatEntity extends AbstractBoat {
     }
 
     public static enum Type implements StringRepresentable {
-        PINE(ModBlocks.YIRA_PLANKS.get(), "pine");
+        YIRA(ModBlocks.YIRA_PLANKS.get(), "yira");
 
         private final String name;
         private final Block planks;
@@ -103,13 +104,13 @@ public class ModBoatEntity extends AbstractBoat {
 
         /*
          * Get a boat type by its enum ordinal
-
+        */
         public static ModBoatEntity.Type byId(int pId) {
             return BY_ID.apply(pId);
         }
 
         public static ModBoatEntity.Type byName(String pName) {
-            return CODEC.byName(pName, PINE);
+            return CODEC.byName(pName, YIRA);
         }
     }
-}*/
+}
